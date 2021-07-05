@@ -11,6 +11,6 @@ It has the following features:
 6) Trainees can update their daily progress in the application.
 7) Admin can register new user to the application
 
-Flow chart: 
+Flow chart: https://github.com/VyankteshVyas/Quovantis-POCs/blob/poc/flow%20chart.png
 
 ER diagram: 
