@@ -1,0 +1,46 @@
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// expected output: 6
+
+console.log(sum.apply(null, numbers));
+// expected output: 6
+
+
+Spread syntax can be used when all elements from an object or array need to be included in a list of some kind. 
+
+
+let numberStore = [0, 1, 2];
+let newNumber = 12;
+numberStore = [...numberStore, newNumber];
+
+
+//Syntaxes
+//For function calls:
+myFunction(...iterableObj); // pass all elements of iterableObj as arguments to function myFunction
+
+
+//For array literals or strings:
+[...iterableObj, '4', 'five', 6]; // combine two arrays by inserting all elements from iterableObj
+
+
+//For object literals (new in ECMAScript 2018):
+let objClone = { ...obj }; // pass all key:value pairs from an object 
+
+
+
+//Rest syntax looks exactly like spread syntax. In a way, rest syntax is the opposite of spread syntax. Spread syntax "expands" an array 
+//into its elements, while rest syntax collects multiple elements and "condenses" them into a single element 
+
+
+//Any argument in the argument list can use spread syntax, and the spread syntax can be used multiple times.
+function myFunction(v, w, x, y, z) { }
+let args = [0, 1];
+myFunction(-1, ...args, 2, ...[3]);
+
+//If we do function call on non spreadable thing like a number then we will get error for example in the above example if we call like 
+//myFunction(-1, ...args, ...2, ...[3]); then we get error because 2 is not a spreadable thing.

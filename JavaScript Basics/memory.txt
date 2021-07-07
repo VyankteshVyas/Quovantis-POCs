@@ -1,0 +1,21 @@
+//variable declare
+console.log(varname);
+var varname;
+console.log(varname);
+varname=10;
+console.log(varname);
+fn();
+//function statement
+function fn(){
+    console.log("Hello from function");
+}
+fn();
+console.log(fnexp);
+// fnexp();
+//Calling fnexp will give error because it is not initialized yet so it's value
+//is undefined as of now. 
+//function expression
+var fnexp=function (){
+    console.log("I am expression");
+}
+fnexp();

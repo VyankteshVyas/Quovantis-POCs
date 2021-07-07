@@ -1,0 +1,24 @@
+const user={
+    id:339,
+    name:"Fred",
+    age:42,
+    education:{
+        degree:"Masters",
+        school:{
+            name:"SPS",
+            location:"Pritampura"
+        }
+    },
+    friends:["falcon","bucky"]
+}
+
+let newDegree=user.education.degree;
+let newName=user.name;
+
+let {education:{degree}}=user;
+let {education:{school:{name,location}}}=user;
+let {education:{school}}=user;
+console.log(degree);
+console.log(name);
+console.log(location);
+console.log(school);

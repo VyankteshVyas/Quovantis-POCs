@@ -1,0 +1,68 @@
+//function statement
+function fn(param){
+    console.log("hello i am",param);
+}
+fn("vanki");
+
+//Immediately invoked function expression (IIFFE)
+
+(function iiffe(){
+    console.log("I will run immediately");
+})()
+
+//arguments
+//pre ES6
+// function varParam(param){
+//     console.log(arguments);
+//     console.log(param);
+// }
+
+//post ES6
+function varParam(...param){
+    console.log(param);
+}
+
+
+varParam();
+varParam(1)
+varParam(1,2,3);
+
+//expression
+//you can assign address of one variable to another 
+//you can also assign address of a function to a variable
+//javascript treats functions also as variables
+// let a=[10,20,30];
+// let b=a;
+// console.log(b);
+
+let fnAdressHolder=function (){
+    console.log("I am expression");
+    return 10;
+}
+console.log(fnAdressHolder);
+let rval=fnAdressHolder();
+console.log(rval);
+
+//let benefit functional programming and async use case.async use case means 
+//like what we did fs.readfile("f1.txt",cb) here cb was a function passed.
+//in async function.This is also functional programming.The main benefit of let is 
+//that we cannot redeclare the same variable.
+// let real=function fn(){
+//     console.log("I am real");
+// }
+// let real=function fn(){
+//     console.log("I am fake");
+// }
+
+//before es6 (before 2015)
+//The issue with single and double quote is that when we try to put a string in 
+// multiple lines then we can't do it in editor code file. we have to put \n 
+// to compensate that. But with backtick we can write multiline strings in editor too.
+//Also with back tick we could directly use variable inside string using $ sign.
+let singlequote="Hello i am single quote";
+let doublequote="Hello i am double quote";
+let a=10;
+let backtickquote=`Hello 
+i am ${a}
+backtick string`;
+console.log(backtickquote);

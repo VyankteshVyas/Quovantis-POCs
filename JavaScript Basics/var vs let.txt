@@ -1,0 +1,74 @@
+//var variable can be redeclared but let variable can't be redeclared
+// var a;
+// var a;
+// a=10;
+// console.log(a);
+//here let a will give error ->SyntaxError: Identifier 'a' has already been declared
+// let a;
+// let a;
+
+//block->let is block scoped
+// let a=10;
+// {
+//     let a=20;
+//     console.log(a);
+//     {
+//         let a=30;
+//         console.log(a);
+//         {
+//             console.log(a);
+//         }
+//     }
+// }
+// console.log(a);
+
+
+//let variable can't be accessed before declaration
+//ReferenceError: a is not defined
+// console.log(a);
+// let a;
+
+
+//TypeError: Assignment to constant variable. because we tried 
+// const a=100;
+// a=50;
+
+
+// SyntaxError: Missing initializer in const declaration
+// const a;
+// a=50;
+
+
+// const is also blcok scoped
+// {
+//     const a=20;
+//     console.log(a);
+// }
+// console.log(a);
+
+
+//var can be redeclared and can be accessed before initialization
+// console.log(a);
+// var a=10;
+// var a=20;
+// console.log(a);
+
+
+
+var varname=10;
+function fn(){
+    var varname=20;
+    varname++;
+    console.log("63 ",varname);
+    function a(){
+        console.log("65",varname);
+        var varname=30;
+        console.log("67",varname);
+    }
+    a();
+    console.log("70 ",varname);
+}
+console.log("72 ",varname);
+fn();
+console.log("74 ",varname);
+
